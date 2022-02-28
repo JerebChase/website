@@ -3,6 +3,7 @@ import About from './about';
 import Experience from './experience';
 import Skills from './skills';
 import Technologies from './technologies';
+import Education from './education';``
 
 const Resume = () => {
   const [currentPage, setCurrentPage] = useState<string>('About');
@@ -29,6 +30,9 @@ const Resume = () => {
         }
         {currentPage === 'Technologies' &&
           <Technologies />
+        }
+        {currentPage === 'Education' &&
+          <Education />
         }
       </div>
     </div>
