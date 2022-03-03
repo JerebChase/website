@@ -1,13 +1,15 @@
 import React from 'react';
-import '../styles/App.css';
+import { ISidebarProps } from '../../types/common/sidebar';
 
-const Sidebar = () => {
+
+const Sidebar = ({ menuItems, component, onClick } : ISidebarProps) => {
   return (
-    <div className="about">
-      <header className="about-header">
-        <h1>Full Stack Software Engineer</h1>
-        <p>I'm passionate about developing efficient, creative, and high-quality software solutions that solve problems, connect people, and hopefully make their lives a little better.</p>
-      </header>
+    <div className={`${component}-sidebar`}>
+      <ul>
+        {menuItems.map(item => {
+          return <li onClick={() => onClick(item)}>{item}</li>
+        })}
+      </ul>
     </div>
   );
 }

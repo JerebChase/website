@@ -1,3 +1,5 @@
 export interface ISidebarProps {
-  MenuItems: string[];
+  menuItems: string[];
+  component: string;
+  onClick: (item: string) => any;
 }
